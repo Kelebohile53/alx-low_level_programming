@@ -1,29 +1,40 @@
 #include "main.h"
 
 /**
-*_memcpy - fills memory with another buffer.
-* @dest: source string
-* @src: string for filling
-* @n: lenght of buffer
+*_strchr - prints from the first occurrence of a char.
+* @s: source string
+* @c: tested char
 * Return: new string.
 */
 
-char *_memcpy(char *dest, char *src, unsigned int n)
+char *_strchr(char *s, char c)
 
 {
 
-	unsigned int i = 0;
+	while (*s != '\0')
 
-	while (i < n)
+	{
 
-	{  
+	if (*s == c)
 
-	*(dest + i) = *(src + i);
+	{
 
-	i++;
+	return (s);
 
 	}
 
-	return (dest);
+	else
+
+	s++;
+
+	}
+
+	if (*s == c)
+
+	return (s);
+
+	else
+
+	return (0);
 
 }
